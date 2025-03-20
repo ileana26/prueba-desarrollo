@@ -27,14 +27,14 @@ button {
     width: 100%;
 }
 button:hover {
-    background-color: #e0e0e0;
+    background-color: transparent;
 }
 .hidden {
     display: none;
 }
 .masInformacion {
-    margin-left: auto;    
-    width: 100%;
+    margin-left: 10%;
+    width: 80%;
 }
 .masInformacion div {
 margin-bottom: 10px;

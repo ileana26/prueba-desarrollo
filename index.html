@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Cvs</title>
+</head>
+<body>
+    <script src="./script.js"></script>
+    <h1 id="title">Lista CVS</h1>
+    <br>
+   <hr> 
+    <p id="texto">Acontinuación se muestra los nombres de los cvs correspondientes, al presionar un nombre en la parte de abajo aparecerá
+        más información al respecto de sus perfiles.
+    </p>
+    <hr> <br>
+    <table>
+        <tr>
+            <th colspan="2">Nombres</th>
+        </tr>
+        <tbody id="listaNombres">
+        </tbody>
+    </table>
+
+<div id="masInformacion" class="masInformacion hidden">
+    <hr>
+    <table id="infoTabla" style="margin-left: 25%;">
+        <th colspan="5">Mas información</th>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Ocupación</th>
+            <th>Nivel de Estudios</th>
+        </tr>
+        <tr>
+            <td id="nombre"></td>
+            <td id="edad"></td>
+            <td id="sexo"></td>
+            <td id="ocupacion"></td>
+            <td id="nivelEstudios"></td>
+        </tr>
+    </table>
+    <hr>
+</div>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 
-    const cvsInfo = [
+const cvsInfo = [
         {nombre: "Carlos Chavez", edad: 24, sexo: "Hombre", ocupacion: "Ingeniero", nivelEstudios: "Universidad"},
         {nombre: "Viridiana Rivera", edad: 30, sexo: "Mujer", ocupacion: "Abogado", nivelEstudios: "Universidad"},
         {nombre: "Berenice Hernandez", edad: 35, sexo: "Mujer", ocupacion: "Desarrollador", nivelEstudios: "Universidad"},
@@ -89,5 +89,28 @@
         document.getElementById("nivelEstudios").textContent = "Nivel Estudios: " + cvsInfos.nivelEstudios;
     }
 
-    window.onload = mostrarNombres;
+//    window.onload = mostrarNombres;   
+    window.addEventListener("load",mostrarNombres);
+    document.getElementById("buscar").addEventListener("input", onInputChange);
+
+    
+
+function onInputChange(){
+    let inputText = document.getElementById("buscar").value.toString().toLowerCase();
+    let mostrar = document.getElementById("listaNombres");
+    let tableRows = mostrar.getElementsByTagName("tr");
+    for(let i=0; i<tableRows.length; i++){
+        let textoConsulta = tableRows[i].cells[1].textContent.toString().toLowerCase();
+        if(textoConsulta.indexOf(inputText) === -1){
+tableRows[i].style.visibility = "collapse";
+        }else{
+            tableRows[i].style.visibility = "collapse";
+
+        }
+    }
+}
+    
+
+
+
 

@@ -8,7 +8,6 @@
     <title>Cvs</title>
 </head>
 <body>
-    <script src="./script.js"></script>
     <h1 id="title">Lista CVS</h1>
     <br>
    <hr> 
@@ -24,6 +23,11 @@
         más información al respecto de sus perfiles.
     </p>-->
     <hr> <br>
+ 
+<br>
+<div>
+    <input type="text" class="form-control" id="buscar" placeholder="buscar nombre">
+</div>
     <table class="table table table-hover">
         <tr>
             <th colspan="2">Nombres</th>
@@ -31,6 +35,7 @@
         <tbody id="listaNombres">
         </tbody>
     </table>
+
 
 <div id="masInformacion" class="masInformacion hidden">
     <hr>
@@ -53,6 +58,9 @@
     </table>
     <hr>
 </div>
+
+<script async src="./script.js"></script>
+
 
 </body>
 </html>

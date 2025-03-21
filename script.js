@@ -89,9 +89,28 @@ const cvsInfo = [
         document.getElementById("nivelEstudios").textContent = "Nivel Estudios: " + cvsInfos.nivelEstudios;
     }
 
-//    window.onload = mostrarNombres;   
-    window.addEventListener("load",mostrarNombres);
-    document.getElementById("buscar").addEventListener("input", onInputChange);
+    function buscar() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const table = document.getElementById('listaNombres');
+        const tr = table.getElementsByTagName('tr');
+        
+        for (let i = 0; i < tr.length; i++) {
+            const td = tr[i].getElementsByTagName('td')[0];
+            if (td) {
+                const txtValue = td.textContent || td.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    tr[i].style.display = '';
+                } else {
+                    tr[i].style.display = 'none';
+                }
+            }
+        }
+    }
+
+window.onload = mostrarNombres;   
+    //window.addEventListener("load",mostrarNombres);
+ /*   document.getElementById("buscar").addEventListener("input", onInputChange);
 
     
 
@@ -108,7 +127,7 @@ tableRows[i].style.visibility = "collapse";
 
         }
     }
-}
+}*/
     
 
 
